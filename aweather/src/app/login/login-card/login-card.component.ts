@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, state, transition, animate, style } from '@angular/animations';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
 @Component({
@@ -18,7 +19,7 @@ import { trigger, state, transition, animate, style } from '@angular/animations'
       ])
   ]
 })
-export class LoginCardComponent {
+export class LoginCardComponent implements OnInit {
 
   backgrounds = [
     { main: 'https://drive.google.com/uc?id=1wsk0lus_UmgB1x7YBHZ30PHhd59oI_QJ', blur: 'https://drive.google.com/uc?id=13sGmUKF193j2BDrvOtAuGMV27mEe5HSE' },
@@ -30,8 +31,10 @@ export class LoginCardComponent {
   pause = false;
   activeBackgroundImage = '';
   showBackgroundImage = false;
-  user = '';
+  user = 'Edwin';
   password = '';
+
+  loginFormGroup: FormGroup;
 
   constructor(
     private _router: Router,
@@ -41,8 +44,20 @@ export class LoginCardComponent {
     setInterval(() => { this._onChangeBackground(); }, 600 * this.secondsToChange);
   }
 
-  public loginSubmit() {
+  ngOnInit() {
+    this.loginFormGroup = new FormGroup({
+      user: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.maxLength(4)]),
+      /*fechas: new FormGroup({
+        desde: new FormControl(''),
+        hasta: new FormControl('')
+      })*/
+    });
 
+  }
+
+  public loginSubmit(loginFormGroup: FormGroup) {
+    console.log(this.loginFormGroup.value, this.loginFormGroup.valid);
     this._router.navigate([`/weather/search`]);
     console.log('Ingreso');
   }

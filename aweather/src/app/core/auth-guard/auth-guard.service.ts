@@ -6,7 +6,13 @@ import { CanActivate, Router } from '@angular/router';
 })
 export class AuthGuardService implements CanActivate {
 
-  //  CanDeactivate,  resolve
+  /*
+existe 3
+canActivete devuelve un true
+CanDeactive puede dejar una ruta
+reSolver permite proporciona datos antes
+de ir a una ruta
+*/
 
   constructor(
     private _router: Router
@@ -22,6 +28,7 @@ export class AuthGuardService implements CanActivate {
   }
 
   private userAuthenticated(): boolean {
-    return false;
+   // return false;
+   return true;
   }
 }
