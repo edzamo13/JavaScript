@@ -1,0 +1,6 @@
+.active{
+    visibility: visible;
+}
+.no-active{
+    visibility: hidden;
+}
