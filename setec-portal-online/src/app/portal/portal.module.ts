@@ -17,11 +17,14 @@ import { PortalRoutingModule } from './portal-routing.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { TopMenuComponent } from '../core/top-menu/top-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
     PortalContainerComponent,
-    PortalMainComponent
+    PortalMainComponent,
   ],
   imports: [
     CommonModule,
@@ -29,11 +32,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PortalRoutingModule,
     LayoutModule,
     MatCardModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BrowserModule, NgbModule
 
   ],
   exports: [PortalMainComponent,
-    PortalContainerComponent]
+    PortalContainerComponent,
+
+  ],
+
 
 })
 export class PortalModule { }
