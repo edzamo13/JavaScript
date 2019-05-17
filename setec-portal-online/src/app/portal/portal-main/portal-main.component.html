@@ -1,31 +1,28 @@
-<ngb-carousel *ngIf="images">
-    <ng-template ngbSlide>
-      <img [src]="images[0]" alt="Random first slide">
-      <div class="carousel-caption">
-        <h3>10 seconds between slides...</h3>
-        <p>This carousel uses customized default values.</p>
+<mat-card>
+  <swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+       
+        <div>Icons made by <a href="https://www.flaticon.es/autores/made-by-made" title="Made by Made">Made by Made</a>
+          from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+            href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
+            BY</a></div>
+        1
       </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <img [src]="images[1]" alt="Random second slide">
-      <div class="carousel-caption">
-        <h3>No mouse events...</h3>
-        <p>This carousel doesn't pause or resume on mouse events</p>
+      <div class="swiper-slide">
+
+        2
       </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <img [src]="images[2]"  alt="Random third slide">
-      <div class="carousel-caption">
-        <h3>No keyboard...</h3>
-        <p>This carousel uses customized default values.</p>
+      <div class="swiper-slide">
+
+        3
       </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <img [src]="images[3]" alt="Random fourth slide">
-      <div class="carousel-caption">
-        <h3>And no wrap after last slide.</h3>
-        <p>This carousel uses customized default values.</p>
-      </div>
-    </ng-template>
-  </ngb-carousel>
-  
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
+</mat-card>
