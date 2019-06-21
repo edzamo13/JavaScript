@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PortalContainerComponent } from './portal-container/portal-container.component';
 import { SharedModule } from '../shared/shared.module';
 import {
-  MatCardModule,
+  MatCardModule, MatGridListModule,
 } from '@angular/material';
 import { PortalMainComponent } from './portal-main/portal-main.component';
 import { PortalRoutingModule } from './portal-routing.module';
@@ -24,7 +24,7 @@ import { SwiperModule } from 'angular2-useful-swiper';
     SharedModule,
     PortalRoutingModule,
     LayoutModule,
-    MatCardModule,
+    MatCardModule,MatGridListModule,
     BrowserAnimationsModule,
     BrowserModule,
     NgbModule,

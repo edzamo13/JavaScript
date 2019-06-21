@@ -1,28 +1,29 @@
 <mat-card>
-  <swiper [config]="config">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-       
-        <div>Icons made by <a href="https://www.flaticon.es/autores/made-by-made" title="Made by Made">Made by Made</a>
-          from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.com</a> is licensed by <a
-            href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
-            BY</a></div>
-        1
-      </div>
-      <div class="swiper-slide">
+  <mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+      [style.background]="tile.color">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image">
+            <img mat-card-image src="./assets/img/{{tile.logo}}.png" alt="Photo {{tile.logo}}">
+<!--
+            <img src="assets/{{model.name}}.png" alt="model {{model.name}}">
+            -->
+          </div>
+          <mat-card-title>{{tile.servicio}}</mat-card-title>
+          <mat-card-subtitle>{{tile.tipoServicio}}</mat-card-subtitle>
+        </mat-card-header>
 
-        2
-      </div>
-      <div class="swiper-slide">
+        <mat-card-content>
+          <p>
+            {{tile.leyenda}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Consultar</button>
+        </mat-card-actions>
+      </mat-card>
 
-        3
-      </div>
-
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </swiper>
+    </mat-grid-tile>
+  </mat-grid-list>
 </mat-card>
