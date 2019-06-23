@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PortalContainerComponent } from './portal-container/portal-container.component';
 import { SharedModule } from '../shared/shared.module';
 import {
   MatCardModule, MatGridListModule,
@@ -13,18 +12,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SwiperModule } from 'angular2-useful-swiper';
+import { CatalogoOperadoresComponent } from './catalogo-operadores/catalogo-operadores.component';
 
 @NgModule({
   declarations: [
-    PortalContainerComponent,
+
     PortalMainComponent,
+
+    CatalogoOperadoresComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
     PortalRoutingModule,
     LayoutModule,
-    MatCardModule,MatGridListModule,
+    MatCardModule, MatGridListModule,
     BrowserAnimationsModule,
     BrowserModule,
     NgbModule,
@@ -34,7 +36,7 @@ import { SwiperModule } from 'angular2-useful-swiper';
 
   ],
   exports: [PortalMainComponent,
-    PortalContainerComponent,
+
 
   ],
 

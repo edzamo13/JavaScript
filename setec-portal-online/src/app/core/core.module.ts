@@ -1,10 +1,18 @@
+import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatToolbarModule, MatListModule, MatDividerModule } from '@angular/material';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { LeftMenuComponent } from './left-menu/left-menu.component';
 import { SharedModule } from '../shared/shared.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTreeModule, MatIconModule, MatButtonModule } from '@angular/material'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+
+
+
 
 @NgModule({
   declarations: [TopMenuComponent, LeftMenuComponent],
@@ -15,6 +23,12 @@ import { RouterModule } from '@angular/router';
     MatListModule,
     MatDividerModule,
     SharedModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatTreeModule, MatIconModule, MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+
     RouterModule.forChild([])
 
   ]

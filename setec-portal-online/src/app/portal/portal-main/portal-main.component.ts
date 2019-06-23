@@ -1,17 +1,6 @@
+import { InfoServicio } from '../../shared/objetos/InfoServicio';
 import { Component, OnInit } from '@angular/core';
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  servicio: string;
-  tipoServicio: string;
-  logo: string;
-  leyenda: string;
-  url: string;
-  refUrl: string;
-}
 
 
 @Component({
@@ -24,7 +13,7 @@ export interface Tile {
 
 export class PortalMainComponent implements OnInit {
 
-  tiles: Tile[] = [
+  tiles: InfoServicio[] = [
     {
       color: 'lightblue', cols: 1, rows: 1,
       servicio: 'Catálogo Nacional de Cualificaciones para Operadores de Capacitación',
